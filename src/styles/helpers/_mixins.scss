@@ -1,0 +1,41 @@
+/* images */
+@mixin img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+@mixin cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+/* ! images */
+
+// reset buttons
+@mixin resetbutton($padding: 0) {
+    border: none;
+    margin: 0;
+    padding: $padding;
+    width: auto;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+    }
+}
+
+@mixin container {
+    max-width: $container;
+    padding: 0 20px;
+}
+  
