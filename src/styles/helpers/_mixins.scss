@@ -34,8 +34,19 @@
     }
 }
 
-@mixin container {
+@mixin custom-container {
     max-width: $container;
-    padding: 0 20px;
+    margin: 0 auto;
+    @include container-full();
 }
-  
+
+@mixin body {
+    font-family: $base-font;
+    font-size: $base-font-size;
+    font-weight: 400;
+}
+
+@mixin resetLink{
+    color: $black;
+    text-decoration: none;
+}
