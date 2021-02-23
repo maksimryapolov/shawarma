@@ -3,15 +3,21 @@ $white: #fff;
 $black: #000;
 /* ! Colors variables */
 
-/* Base font size */
+/* Base font */
 $base-font-size: 16px !default;
-/* ! Base font size */
 
-$container: 1440px;
+$fw-light: '';
+$fw-regular: '';
+$fw-medium: '';
+$fw-bold: '';
+$fw-black: '';
 
 $base-font: '';
 
 $base: 4px;
+/* ! Base font */
+
+$container: 1440px;
 
 /* breakpoints */
 $screen-sm: 576px;
