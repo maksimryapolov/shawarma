@@ -32,4 +32,9 @@ ul {
 
 a {
     @include resetLink;
+    color: inherit;
+}
+
+.section-inner {
+    @include custom-container;
 }
