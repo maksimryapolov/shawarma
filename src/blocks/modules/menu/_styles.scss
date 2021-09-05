@@ -1,0 +1,11 @@
+.menu {
+    letter-spacing: 1px;
+
+    &__items {
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: $base*12;
+    }
+}

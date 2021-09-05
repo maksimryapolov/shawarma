@@ -1,0 +1,46 @@
+.logo {
+    &__title {
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        font-size: rem(30);
+
+        @keyframes moveTop {
+            from {
+                height: 0;
+            }
+
+            to {
+                height: 50%;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: rotate(358deg);
+            background-color: transparentize($orange, .3);
+            animation: moveTop  .4s infinite ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: .4s;
+        }
+    }
+
+    &__wrapper {
+        img {
+            @include img;
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+}

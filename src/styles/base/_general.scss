@@ -38,3 +38,11 @@ a {
 .section-inner {
     @include custom-container;
 }
+
+.base-hover-link {
+    @include transform-liner("color");
+
+    &:hover {
+        color: $orange;
+    }
+}

@@ -1,0 +1,112 @@
+.section-catalog {
+    @include cover("../img/section-catalog/bg-catalog.jpg");
+    padding-top: $indent-vertical-sm;
+    padding-bottom: $indent-vertical-sm;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparentize($black, .85);
+    }
+
+    &__title {
+        text-align: center;
+        font-size: rem(36);
+        margin-bottom: $indent-vertical-sm;
+    }
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+
+    &__item {
+        width: calc((100% - 3 * 30px) / 4);
+        background-color: $white;
+        border-radius: $base*5;
+
+        &:hover {
+            -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 1);
+            -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 1);
+            box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.7);
+
+            .cards__hidden {
+                opacity: 1;
+
+                button {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            @include img;
+            border-top-left-radius: $base*5;
+            border-top-right-radius: $base*5;
+        }
+    }
+
+    &__hidden {
+        @include transform-liner("opacity");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top-left-radius: $base*5;
+        border-top-right-radius: $base*5;
+        background-color: transparentize($black, .5);
+        opacity: 0;
+
+        button {
+            @include transform-liner("transform, opacity, background-color", .125s);
+            font-size: rem(20);
+            border: 3px solid $orange;
+            padding: $base*2 $base*6;
+            color: $white;
+            border-radius: $base*2;
+            background-color: transparentize($orange, .85);
+            cursor: pointer;
+            transform: translateY(200%);
+            opacity: 0;
+
+            &:hover {
+                background-color: $orange;
+            }
+        }
+    }
+
+    &__bottom {
+        border-bottom-right-radius: $base*5;
+        border-bottom-left-radius: $base*5;
+        padding: $base*8 $base*5 $base*8 $base*5;
+        text-align: center;
+        font-size: rem(24);
+    }
+
+    &__name {
+        margin-bottom: $base*5;
+        border-bottom: 2px solid $orange;
+        padding-bottom: $base;
+        cursor: pointer;
+    }
+
+    &__price {}
+}

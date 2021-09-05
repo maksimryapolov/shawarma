@@ -1,0 +1,42 @@
+section.section-catalog
+    .section-catalog__body.section-inner
+        .section-catalog__title
+            +title("МЕНЮ")
+        .section-catalog__cards
+            .cards
+                .cards__item(id="product_1")
+                    .cards__img
+                        img(src="./img/section-catalog/card-img.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Классическая
+                        .cards__price от 140 ₽
+                    +popup("product_1-modal")
+                .cards__item(id="product_2")
+                    .cards__img
+                        img(src="./img/section-catalog/card-img.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Сырная
+                        .cards__price от 140 ₽
+                    +popup("product_2-modal")
+                .cards__item(id="product_3")
+                    .cards__img
+                        img(src="./img/section-catalog/card-img.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Классическая
+                        .cards__price от 140 ₽
+                    +popup("product_3-modal")
+                .cards__item(id="product_4")
+                    .cards__img
+                        img(src="./img/section-catalog/card-img.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Сырная
+                        .cards__price от 140 ₽
+                    +popup("product_4-modal")

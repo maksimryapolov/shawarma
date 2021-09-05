@@ -1,0 +1,107 @@
+.popup {
+    visibility: hidden;
+
+    &__bg {
+        @include transform-liner(opacity);
+        position: fixed;
+        z-index: -9999;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparentize($black, .3);
+        opacity: 0;
+    }
+
+    &__bg-show {
+        opacity: 1;
+        z-index: 100;
+    }
+
+    &__body {
+        @include transform-liner(transform, .2s);
+        @include vcenter;
+        position: fixed;
+        background-color: $white;
+        border-radius: $base*2;
+        transform: translate(-50%, -150%);
+    }
+
+    &__body-show {
+        transform: translate(-50%, -50%);
+    }
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        top: -10px;
+        right: -10px;
+        font-size: rem(28);
+        width: $base*5;
+        height: $base*5;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__left, &__right {
+        flex: 0 1 50%;
+    }
+
+    &__left {
+        padding: $base*10;
+        text-align: center;
+        background: radial-gradient(circle, rgb(251, 178, 27) 28%, rgb(180, 134, 41) 100%);
+        color: $white;
+    }
+
+    &__img-wrapper {
+        @include cover("../img/section-catalog/card-img.jpg");
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        font-size: rem(30);
+        font-weight: $fw-semi-bold;
+        margin-bottom: $base*10;
+    }
+
+    &__text-block {
+        font-size: rem(22);
+        margin-bottom: $base*5;
+    }
+
+    &__text-item {
+        margin-bottom: $base*10;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div:first-child {
+            margin-bottom: $base;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.popup__show {
+    visibility: visible;
+}

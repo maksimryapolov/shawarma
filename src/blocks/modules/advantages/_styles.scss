@@ -1,0 +1,17 @@
+.advantages {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: $base*25;
+    }
+
+    &__item-icon {
+        margin-right: $base*4;
+    }
+}

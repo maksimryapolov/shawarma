@@ -1,0 +1,85 @@
+.header {
+    position: relative;
+    height: 100vh;
+    font-size: rem(18);
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-top: $base*5;
+        padding-bottom: $base*5;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: $base*5;
+        border-bottom: 1px solid transparentize($orange, .7);
+    }
+
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__slogan {
+        font-size: rem(65);
+        text-align: left;
+        text-transform: uppercase;
+        width: 40%;
+        margin-bottom: $base*8;
+    }
+
+    &__banner {
+        img {
+            @include img;
+        }
+    }
+
+    &__btn {
+        @include transform-liner("background-color", .2s);
+        display: flex;
+        align-items: flex-end;
+        border: 1px solid $orange;
+        -webkit-border-radius: $base;
+        -moz-border-radius: $base;
+        border-radius: $base;
+        padding: $base*3 $base*6;
+        font-size: rem(22);
+        background-color: $white;
+        cursor: pointer;
+
+        &:hover {
+            background: $orange;
+            color: $white;
+        }
+
+        span {
+            margin-right: $base*2;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+
+    &__wrapper:not(:last-child) {
+        display: flex;
+        position: relative;
+        padding-right: $base*8;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: ($base*8)/2;
+            width: 1px;
+            height: 100%;
+            background-color: transparentize($black, .2);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.sectio-title {
+    h2 {
+        display: inline-block;
+        position: relative;
+        z-index: 5;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -5;
+            left: 0;
+            background-color: $orange;
+            width: $base*14;
+            height: $base*14;
+            -webkit-transform: skewX(-20deg);
+            -o-transform: skewX(-20deg);
+            -moz-transform: skewX(-20deg);
+            transform: skewX(-20deg);
+        }
+    }
+}

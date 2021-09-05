@@ -1,23 +1,28 @@
 /* Colors variables */
 $white: #fff;
 $black: #000;
+$orange: #fbb21b;
 /* ! Colors variables */
 
-/* Base font */
-$base-font-size: 16px !default;
-
-$fw-light: '';
-$fw-regular: '';
-$fw-medium: '';
-$fw-bold: '';
-$fw-black: '';
-
-$base-font: '';
-
 $base: 4px;
+$base-duration: .3s;
+
+/* Base font */
+$base-font-size: $base*4 !default;
+
+$indent-vertical-sm: $base * 10;
+$indent-vertical-md: $base * 15;
+
+$fw-light: "";
+$fw-regular: 400;
+$fw-medium: "";
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-black: "";
+
 /* ! Base font */
 
-$container: 1440px;
+$container: 1300px;
 
 /* breakpoints */
 $screen-sm: 576px;
@@ -29,3 +34,60 @@ $sceren-sm-max: 767px;
 $screen-md-max: 991px;
 $screen-lg-max: 1199px;
 /* ! breakpoints */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

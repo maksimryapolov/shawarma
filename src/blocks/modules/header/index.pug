@@ -1,0 +1,24 @@
+header.header#parallax-window(data-parallax="scroll" data-image-src="./img/header/header-bg-2.webp")
+    .header__body.section-inner
+        .header__top
+            .header__logo
+                include ../logo/index.pug
+            .header__navigation.navigation
+                .navigation__wrapper.navigation__menu
+                    include ../menu/index.pug
+                .navigation__wrapper.navigation__social
+                    include ../social/index.pug
+                .navigation__wrapper.navigation__phone.base-hover-link
+                    a.navigation__number(href="tel:+79040870275") +7 (904) 087 02-75
+        .header__content
+            .header__text
+                h1.header__slogan Гавань #[br] настоящего вкуса
+                .header__btn-wrapper
+                    button.header__btn #[span Смотреть меню] #[i.fas.fa-chevron-down]
+            .header__banner
+                picture
+                    source(srcset="./img/header/banner.webp" type="image/webp")
+                    img.header__banner-img(src="./img/header/banner.png" alt="")
+        .header__bottom
+            .header__advantages
+                include ../advantages/index.pug

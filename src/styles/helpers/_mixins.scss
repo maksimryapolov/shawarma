@@ -5,7 +5,8 @@
     height: auto;
 }
   
-@mixin cover {
+@mixin cover($path: "") {
+    background-image: url($path);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -14,10 +15,10 @@
 
 // reset buttons
 @mixin resetbutton($padding: 0) {
-    border: none;
-    margin: 0;
-    padding: $padding;
     width: auto;
+    margin: 0;
+    border: none;
+    padding: $padding;
     background: transparent;
     cursor: pointer;
     appearance: none;
@@ -29,24 +30,42 @@
         font-family: $font-family;
         font-weight: $weight;
         font-style: $style;
-        src: url('#{$file-path}.eot');
-        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+        src: url("#{$file-path}.eot");
+        src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
     }
 }
 
 @mixin custom-container {
+    @include container-full();
     max-width: $container;
     margin: 0 auto;
-    @include container-full();
 }
 
 @mixin body {
-    font-family: $base-font;
+    @include montserrat;
     font-size: $base-font-size;
-    font-weight: 400;
+    font-weight: $fw-regular;
+    font-style: normal;
 }
 
-@mixin resetLink{
+@mixin resetLink {
     color: $black;
     text-decoration: none;
+}
+
+@mixin montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+@mixin vcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin transform-liner($property: "", $duration: $base-duration) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: linear;
 }

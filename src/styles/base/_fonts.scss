@@ -10,4 +10,6 @@
 900 - Black (Heavy)
 */
 
-// @include font-face('Raleway', '../fonts/Raleway-Light', 300);
+@include font-face("Montserrat", "../../fonts/Montserrat-Regular", 400);
+@include font-face("Montserrat", "../../fonts/Montserrat-SemiBold", 600);
+@include font-face("Montserrat", "../../fonts/Montserrat-Bold", 700);
