@@ -16,7 +16,9 @@
     },
     "rules": {
         "indent": [
-            "error", 4
+            "error", 4, {
+                "ignoredNodes": ["TemplateLiteral"]
+            }
         ],
         "linebreak-style": [
             "error",
@@ -29,6 +31,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "template-curly-spacing" : "off"
     }
 }

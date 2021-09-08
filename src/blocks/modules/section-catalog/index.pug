@@ -12,7 +12,7 @@ section.section-catalog
                     .cards__bottom
                         .cards__name.base-hover-link Классическая
                         .cards__price от 140 ₽
-                    +popup("product_1-modal")
+                    div.d-none(data-title="Классичская &#128525; шаурма на углях")
                 .cards__item(id="product_2")
                     .cards__img
                         img(src="./img/section-catalog/card-img.jpg")
@@ -21,7 +21,6 @@ section.section-catalog
                     .cards__bottom
                         .cards__name.base-hover-link Сырная
                         .cards__price от 140 ₽
-                    +popup("product_2-modal")
                 .cards__item(id="product_3")
                     .cards__img
                         img(src="./img/section-catalog/card-img.jpg")
@@ -30,7 +29,6 @@ section.section-catalog
                     .cards__bottom
                         .cards__name.base-hover-link Классическая
                         .cards__price от 140 ₽
-                    +popup("product_3-modal")
                 .cards__item(id="product_4")
                     .cards__img
                         img(src="./img/section-catalog/card-img.jpg")
@@ -39,4 +37,7 @@ section.section-catalog
                     .cards__bottom
                         .cards__name.base-hover-link Сырная
                         .cards__price от 140 ₽
-                    +popup("product_4-modal")
+    +popup("product_1-modal")
+    +popup("product_2-modal")
+    +popup("product_3-modal")
+    +popup("product_4-modal")
