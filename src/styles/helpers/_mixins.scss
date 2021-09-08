@@ -69,3 +69,7 @@
     transition-duration: $duration;
     transition-timing-function: linear;
 }
+
+@mixin d-none {
+    display: none;
+}
