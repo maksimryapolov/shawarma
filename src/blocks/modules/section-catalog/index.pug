@@ -3,6 +3,8 @@ section.section-catalog
         .section-catalog__title
             +title("МЕНЮ")
         .section-catalog__cards
+            .section-catalog__subtitle.section-catalog__subtitle_ident
+                +subtitle("ШАУРМА")
             .cards
                 .cards__item(id="product_1")
                     .cards__img
@@ -10,7 +12,7 @@ section.section-catalog
                         .cards__hidden
                             button(type="button") Подробнее
                     .cards__bottom
-                        .cards__name.base-hover-link Классическая
+                        .cards__name.base-hover-link Классическая шаурма
                         .cards__price от 130 ₽
                     div.d-none(data-title="Классичская &#128525; шаурма на углях")
                     div.d-none(data-desc="Сытная закуска, нежная курица или свинина на Ваш выбор, фирменный соус, морковка по корейски, свежие овощи.")
@@ -22,11 +24,81 @@ section.section-catalog
                         .cards__hidden
                             button(type="button") Подробнее
                     .cards__bottom
-                        .cards__name.base-hover-link Сырная
+                        .cards__name.base-hover-link Сырная шаурма
                         .cards__price от 140 ₽
-                    div.d-none(data-title="Шаурма сырная на углях")
+                    div.d-none(data-title="Сырная шаурма на углях")
                     div.d-none(data-desc="Отличная перекус, с нежным сыром и сырным соусом, нежная курица или свинина на Ваш выбор, фирменный соус.")
                     div.d-none(data-size="300 грамм")
                     div.d-none(data-price="от 140 ₽")
+                .cards__item(id="product_3")
+                    .cards__img
+                        img(src="./img/section-catalog/card-img.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Шашлык в лаваше
+                        .cards__price 150 ₽
+                    div.d-none(data-title="Шашлык в лаваше")
+                    div.d-none(data-desc="")
+                    div.d-none(data-size="200 грамм")
+                    div.d-none(data-price="150 ₽")
+                .cards__item(id="product_4")
+                    .cards__img
+                        img(src="./img/section-catalog/chees.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Шашлык
+                        .cards__price от 140 ₽
+                    div.d-none(data-title="Шашлык")
+                    div.d-none(data-desc="")
+                    div.d-none(data-size="от 100 грамм")
+                    div.d-none(data-price="140 ₽")  
+                .cards__item(id="product_5")
+                    .cards__img
+                        img(src="./img/section-catalog/chees.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Шашлык
+                        .cards__price от 140 ₽
+                    div.d-none(data-title="Шашлык")
+                    div.d-none(data-desc="")
+                    div.d-none(data-size="от 100 грамм")
+                    div.d-none(data-price="140 ₽")
+            .section-catalog__subtitle.section-catalog__subtitle_ident
+                +subtitle("ВЫПЕЧКА")
+            .cards
+                .cards__item(id="product_6")
+                    .cards__img
+                        img(src="./img/section-catalog/pizza.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Пицца
+                        .cards__price 70 ₽
+                    div.d-none(data-title="Пицца")
+                    div.d-none(data-desc="Мама-Мия")
+                    div.d-none(data-size="за 1 шт.")
+                    div.d-none(data-price="70 ₽")
+            .section-catalog__subtitle.section-catalog__subtitle_ident
+                +subtitle("ДОПОЛНИТЕЛЬНО")
+            .cards
+                .cards__item(id="product_6")
+                    .cards__img
+                        img(src="./img/section-catalog/pizza.jpg")
+                        .cards__hidden
+                            button(type="button") Подробнее
+                    .cards__bottom
+                        .cards__name.base-hover-link Пицца
+                        .cards__price 70 ₽
+                    div.d-none(data-title="Пицца")
+                    div.d-none(data-desc="Мама-Мия")
+                    div.d-none(data-size="за 1 шт.")
+                    div.d-none(data-price="70 ₽")
     +popup("product_1-modal")
     +popup("product_2-modal")
+    +popup("product_3-modal")
+    +popup("product_4-modal")
+    +popup("product_6-modal")
+

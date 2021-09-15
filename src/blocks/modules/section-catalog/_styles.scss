@@ -1,3 +1,5 @@
+$row-desktop: 4;
+
 .section-catalog {
     @include cover("../img/section-catalog/bg-catalog.jpg");
     padding-top: $indent-vertical-sm;
@@ -20,19 +22,34 @@
         font-size: rem(36);
         margin-bottom: $indent-vertical-sm;
     }
+
+    &__subtitle {
+        &_ident {
+            margin-bottom: $base*8;
+        }
+    }
 }
 
 .cards {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    flex-wrap: wrap;
+    padding-bottom: $base*8;
 
     &__item {
-        width: calc((100% - 3 * 30px) / 4);
+        width: calc((100% - 3 * 30px) / #{$row-desktop});
         background-color: $white;
         border-radius: $base*5;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &:nth-child(n+#{$row-desktop + 1}) {
+            margin-top: $base*8;
+        }
 
         &:hover {
             -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 1);
@@ -99,6 +116,10 @@
         padding: $base*8 $base*5 $base*8 $base*5;
         text-align: center;
         font-size: rem(24);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__name {
