@@ -46,11 +46,13 @@
     function setContentModal(entity, el) {
         /* Получение и сохр. свойств */
         const titleModal = entity.querySelector("[data-title]")?.dataset.title;
+        const bgModal = entity.querySelector(".cards__img img")?.getAttribute("src");
         const descModal = entity.querySelector("[data-desc]")?.dataset.desc;
         const sizeModal = entity.querySelector("[data-size]")?.dataset.size;
         const priceModal = entity.querySelector("[data-price]")?.dataset.price;
 
         el.querySelector(".popup__title").innerHTML = titleModal;
+        el.querySelector(".popup__img-wrapper").style.backgroundImage = `url("${bgModal}")`;
         el.querySelector(".popup__text-item").innerHTML = descModal;
         el.querySelector(".popup__size").innerHTML = sizeModal;
         el.querySelector(".popup__price").innerHTML = priceModal;
