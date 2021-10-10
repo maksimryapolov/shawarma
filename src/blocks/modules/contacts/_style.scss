@@ -2,17 +2,15 @@
     &__body {
         display: flex;
         justify-content: space-between;
-        background-color: $orange;
-        background: radial-gradient(circle, rgba(251,205,16,1) 0%, rgba(255,195,53,1) 100%);
         color: $white;
     }
 
     &__content {
-        flex: 0 1 50%;
         display: flex;
+        flex: 0 1 50%;
         flex-direction: column;
-        padding-top: $base*15;
-        padding-bottom: $base*15;
+        padding-top: $base*20;
+        padding-bottom: $base*20;
         margin-right: 0;
     }
 
@@ -26,8 +24,6 @@
     &__item-info:not(:last-child) {
         margin-bottom: $base*2;
         padding-bottom: $base*2;
-
-        
     }
 
     &__point {
