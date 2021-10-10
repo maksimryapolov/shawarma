@@ -39,6 +39,10 @@ a {
     @include custom-container;
 }
 
+.section-inner_half {
+    @include custom-container-half;
+}
+
 .base-hover-link {
     @include transform-liner("color");
 

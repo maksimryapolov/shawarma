@@ -35,10 +35,20 @@
     }
 }
 
-@mixin custom-container {
-    @include container-full();
+%custom-container {
     max-width: $container;
     margin: 0 auto;
+}
+
+@mixin custom-container {
+    @include container-full();
+    @extend %custom-container;
+}
+
+@mixin custom-container-half {
+    @include container-full();
+    @extend %custom-container;
+    max-width: $container/2;
 }
 
 @mixin body {
