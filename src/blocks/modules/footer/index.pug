@@ -1,3 +1,18 @@
 footer.footer 
     .footer__body.section-inner
-        h1 FOOTER
+        .footer__content
+            .footer__logo
+                include ../logo/index.pug
+            .footer__nav
+                ul.footer__menu
+                    li.footer__menu-item
+                        a(href="#catalog") Каталог
+                    li.footer__menu-item
+                        a(href="#contacts") Контакты
+                    li.footer__menu-item
+                        a(href="#popup") Реквизиты
+                .footer__social
+                    include ../social/index.pug
+            .footer__arrow-top
+                i.fas.fa-arrow-up
+

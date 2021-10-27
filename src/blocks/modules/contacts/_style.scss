@@ -17,7 +17,7 @@
     &__item-info {
         span {
             display: inline-block;
-            border-bottom: 2px solid $white;
+            border-bottom: 2px solid $orange;
         }
     }
 
@@ -41,9 +41,6 @@
 
     &__address {
         font-size: rem(30);
-    }
-
-    &__mobile-block {
     }
 
     &__mobile-block &__mobile:last-child {
